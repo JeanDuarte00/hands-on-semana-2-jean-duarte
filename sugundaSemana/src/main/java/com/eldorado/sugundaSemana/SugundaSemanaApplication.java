@@ -8,6 +8,7 @@ public class SugundaSemanaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SugundaSemanaApplication.class, args);
+
 	}
 
 }
