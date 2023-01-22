@@ -1,0 +1,7 @@
+FROM amazoncorretto:19.0.2-alpine3.17
+LABEL maintainer="Jean Duarte"
+WORKDIR /opt/app
+RUN apk update
+COPY target/segundaSemana.jar app.jar
+ENTRYPOINT ["java", "-Dspring.profiles.active=docker", "-jar", "app.jar"]
+EXPOSE 8080
