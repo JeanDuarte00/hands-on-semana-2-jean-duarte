@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  name: "Segunda Semana"
+
+
+spring:
+  config:
+    activate:
+      on-profile: docker
+  data:
+    mongodb:
+      auto-index-creation: true
+      uri: ${MONGODB_CONNECTION_STRING}
