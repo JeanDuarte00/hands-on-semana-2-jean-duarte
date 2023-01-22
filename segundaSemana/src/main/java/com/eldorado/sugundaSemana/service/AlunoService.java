@@ -20,8 +20,7 @@ public class AlunoService {
 
     public Aluno save (Aluno data){
         data.setId(UUID.randomUUID());
-        var result =  this.repository.insert(data);
-        return result;
+        return this.repository.insert(data);
     }
 
     public List<Aluno> getAll(){

@@ -2,7 +2,6 @@ package com.eldorado.sugundaSemana.infrastructure.entrypoint;
 
 import com.eldorado.sugundaSemana.domain.entities.Aluno;
 import com.eldorado.sugundaSemana.infrastructure.entrypoint.response.RestfullResponse;
-import com.eldorado.sugundaSemana.service.AferidorImcService;
 import com.eldorado.sugundaSemana.service.AlunoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -38,7 +37,7 @@ public class AlunoEntrypoint {
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity getAll() {
+    public ResponseEntity<List<RestfullResponse>> getAll() {
         var result = this.service.getAll();
         List<RestfullResponse> list = new ArrayList<>();
         result.forEach(data -> {
