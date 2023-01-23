@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "69abe9a5-8bac-4b1a-b647-1d677341fd33",
+		"name": "eldorado-training",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2658818"
+	},
+	"item": [
+		{
+			"name": "IMC",
+			"item": [
+				{
+					"name": "check/health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_url}}/check/health",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"check",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"altura\": 1.80,\n    \"peso\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_url}}/api/imc",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"api",
+								"imc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_url}}/api/imc",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"api",
+								"imc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_url}}/aferir/api/search/fc1e83d1-b9d4-4f51-b06a-6e82ae6bf49b",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"aferir",
+								"api",
+								"search",
+								"fc1e83d1-b9d4-4f51-b06a-6e82ae6bf49b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete by  id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host_url}}/api/imc/delete/dceb996e-1eb7-4e37-8896-8fde609ad92d",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"api",
+								"imc",
+								"delete",
+								"dceb996e-1eb7-4e37-8896-8fde609ad92d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"09dfac3d-838b-4616-a738-30c7c83b931f\",\n    \"altura\": 2.2,\n    \"peso\": 50.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_url}}/api/imc/update",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"api",
+								"imc",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Aluno",
+			"item": [
+				{
+					"name": "create new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"jean\",\n    \"identificacao\": {\n        \"numero\": \"56789\",\n        \"tipo\": \"rg\"\n    },\n    \"genero\": \"MASCULINO\",\n    \"dataNascimento\": \"2023-01-21\",\n    \"endereco\": {\n        \"rua\":\"rua gervasio pires\",\n        \"numero\": 23,\n        \"cidade\": \"recife\",\n        \"estado\":\"pernambuco\"\n    },\n    \"contato\": {\n        \"email\": \"meuemail@mail.com\",\n        \"telefone\": \"81 9 8888-8888\"\n    },\n    \"frequenciaAcademia\": {\n        \"quantidadeMaximaFrequencia\": 30,\n        \"quantidadeDiasFrequentado\": 0\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_url}}/api/aluno",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"api",
+								"aluno"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
